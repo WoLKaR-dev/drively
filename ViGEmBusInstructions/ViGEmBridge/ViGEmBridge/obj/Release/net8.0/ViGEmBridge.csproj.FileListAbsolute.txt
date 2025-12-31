@@ -1,0 +1,17 @@
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\bin\Release\net8.0\ViGEmBridge.exe
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\bin\Release\net8.0\ViGEmBridge.deps.json
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\bin\Release\net8.0\ViGEmBridge.runtimeconfig.json
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\bin\Release\net8.0\ViGEmBridge.dll
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\bin\Release\net8.0\ViGEmBridge.pdb
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\bin\Release\net8.0\Nefarius.ViGEm.Client.dll
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\obj\Release\net8.0\ViGEmBridge.csproj.AssemblyReference.cache
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\obj\Release\net8.0\ViGEmBridge.GeneratedMSBuildEditorConfig.editorconfig
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\obj\Release\net8.0\ViGEmBridge.AssemblyInfoInputs.cache
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\obj\Release\net8.0\ViGEmBridge.AssemblyInfo.cs
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\obj\Release\net8.0\ViGEmBridge.csproj.CoreCompileInputs.cache
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\obj\Release\net8.0\ViGEmBri.63018502.Up2Date
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\obj\Release\net8.0\ViGEmBridge.dll
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\obj\Release\net8.0\refint\ViGEmBridge.dll
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\obj\Release\net8.0\ViGEmBridge.pdb
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\obj\Release\net8.0\ViGEmBridge.genruntimeconfig.cache
+D:\newho\Documents\ViGEmBridge\ViGEmBridge\obj\Release\net8.0\ref\ViGEmBridge.dll

@@ -1,0 +1,6 @@
+D:\newho\Desktop\Nueva carpeta\ViGEmBridge.exe
+D:\newho\Desktop\Nueva carpeta\ViGEmBridge.dll
+D:\newho\Desktop\Nueva carpeta\ViGEmBridge.deps.json
+D:\newho\Desktop\Nueva carpeta\ViGEmBridge.runtimeconfig.json
+D:\newho\Desktop\Nueva carpeta\ViGEmBridge.pdb
+D:\newho\Desktop\Nueva carpeta\Nefarius.ViGEm.Client.dll

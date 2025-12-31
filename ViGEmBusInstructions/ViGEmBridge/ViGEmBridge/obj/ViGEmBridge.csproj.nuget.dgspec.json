@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\newho\\Documents\\ViGEmBridge\\ViGEmBridge\\ViGEmBridge.csproj": {}
+  },
+  "projects": {
+    "D:\\newho\\Documents\\ViGEmBridge\\ViGEmBridge\\ViGEmBridge.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\newho\\Documents\\ViGEmBridge\\ViGEmBridge\\ViGEmBridge.csproj",
+        "projectName": "ViGEmBridge",
+        "projectPath": "D:\\newho\\Documents\\ViGEmBridge\\ViGEmBridge\\ViGEmBridge.csproj",
+        "packagesPath": "C:\\Users\\newho\\.nuget\\packages\\",
+        "outputPath": "D:\\newho\\Documents\\ViGEmBridge\\ViGEmBridge\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\newho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Nefarius.ViGEm.Client": {
+              "target": "Package",
+              "version": "[1.21.256, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
