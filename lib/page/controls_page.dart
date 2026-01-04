@@ -174,14 +174,21 @@ class _QRConnectPageState extends State<QRConnectPage> {
     }
   }
 
+  @override
+  void dispose() {
+    super.dispose();
+    controller?.stopCamera();
+  }
+
   void _onQrCodeCreated(QRViewController controller) {
     this.controller = controller;
     controller.scannedDataStream.listen((scanData) {
       if (mounted) {
+        controller.pauseCamera();
         Navigator.pop(context);
+        List<String>? list = scanData.code?.split("|");
+        widget.onConnected(list);
       }
-      List<String>? list = scanData.code?.split("|");
-      widget.onConnected(list);
     });
   }
 
@@ -407,6 +414,7 @@ class _PCInformationState extends State<PCInformation> {
                 DirectionIcon(rotation: Pedals.instance.rotation),
               ],
             ),
+
             //SECTION Desconectar
             ElevatedButton(
               onPressed: () {
