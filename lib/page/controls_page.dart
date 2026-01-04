@@ -11,6 +11,8 @@ import 'package:drively/style/general_style.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:qr_code_scanner_plus/qr_code_scanner_plus.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 import 'package:sensors_plus/sensors_plus.dart';
 
 //SCREEN Página de Conexion
@@ -115,8 +117,94 @@ class _ConnectPageState extends State<ConnectPage> {
                         },
                         child: Text("Connect"),
                       ),
+                      //SECTION QR Connect
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => QRConnectPage(
+                                onConnected: (List<String>? information) async {
+                                  if (information != null) {
+                                    ConnectionData connectionSingleton = ConnectionData.instance;
+                                    connectionSingleton.setData(
+                                      information[0],
+                                      information[1],
+                                      information[2],
+                                    );
+                                    await openUDP();
+                                    setState(() {
+                                      connected = true;
+                                    });
+                                  }
+                                },
+                              ),
+                            ),
+                          );
+                        },
+                        child: Text("QR Connect"),
+                      ),
                     ],
             ),
+    );
+  }
+}
+
+//SCREEN QR Connect
+class QRConnectPage extends StatefulWidget {
+  final dynamic onConnected;
+  const QRConnectPage({super.key, required this.onConnected});
+
+  @override
+  State<QRConnectPage> createState() => _QRConnectPageState();
+}
+
+class _QRConnectPageState extends State<QRConnectPage> {
+  final GlobalKey qrKey = GlobalKey(debugLabel: "QR");
+  Barcode? result;
+  QRViewController? controller;
+
+  @override
+  void reassemble() {
+    super.reassemble();
+    if (Platform.isAndroid) {
+      controller?.pauseCamera();
+    } else if (Platform.isIOS) {
+      controller?.resumeCamera();
+    }
+  }
+
+  void _onQrCodeCreated(QRViewController controller) {
+    this.controller = controller;
+    controller.scannedDataStream.listen((scanData) {
+      if (mounted) {
+        Navigator.pop(context);
+      }
+      List<String>? list = scanData.code?.split("|");
+      widget.onConnected(list);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("QR Connect ")),
+      body: Background(
+        child: Scroll(
+          padding: EdgeInsets.all(15),
+          children: [
+            //SECTION View QR
+            ClipRRect(
+              borderRadius: BorderRadiusGeometry.circular(15),
+              child: SizedBox(
+                width: MediaQuery.sizeOf(context).width * 0.9,
+                height: MediaQuery.sizeOf(context).width * 0.9,
+                child: QRView(key: qrKey, onQRViewCreated: _onQrCodeCreated),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -288,7 +376,19 @@ class _PCInformationState extends State<PCInformation> {
           padding: EdgeInsets.all(10),
           children: [
             //SECTION Datos
-            Text("ACTIVE: \nIP: $ip \nPORT: $port", style: TextStyle(fontSize: 20)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 10,
+              children: [
+                Text(
+                  "ACTIVE: \nIP: $ip \nPORT: $port \nScan In-App",
+                  style: TextStyle(fontSize: 20),
+                ),
+                //SECTION QR
+                if (ip != "" && port != "")
+                  QrImageView(data: "$ip|$port|${int.parse(port) + 1}", size: 150),
+              ],
+            ),
             //SECTION
             Text("Freno: ${Pedals.instance.brake}"),
             Text("Acelerador: ${Pedals.instance.gas}"),

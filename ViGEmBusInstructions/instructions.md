@@ -1,16 +1,19 @@
-# Prerrequisitos
-- 1. Instalar el Driver como Administrador
-- 2. Reiniciar el PC 
+# Project
+- ViGEmBridge folder is the ViGEm controller project.
+- You can find there all the necessary project files to modify controller code by your own.  
 
-# Proyecto 
-- 1. Abre Visual Studio → “Crear proyecto” → “Aplicación de Consola” en C#.
-- 2. Ponle un nombre, por ejemplo FlutterToViGEm.
-- 3. Asegúrate de usar .NET 6 o .NET 7 (cualquiera moderno).
-- 4. En Visual Studio, abre NuGet Package Manager.
-- 5. Busca e instala: Nefarius.ViGEm.Client.
-- 6. Esto permite crear el volante virtual Xbox360 desde C#.
+# Requirements 
+- 1. Install (ViGEm Bus)[https://vigembus.com/]
+- 2. Restart PC
 
-# Publicar 
-- 1. En el proyecto: Build → Publish
-- 2. Elegir carpeta de destino
-- 3. 
+# Create Project  
+- 1. Open Visual Studio -> "Create Project" -> "Console APP" in C#.
+- 2. Give your project a name, for instance: FlutterToViGEm.
+- 3. Use .NET 6 or newer.
+- 4. In Visual Studio, open NuGet Package Manager.
+- 5. Search and install: Nefarius.ViGEm.Client.
+- 6. Use ViGEmBridge folder as a template. 
+
+# Export and Publish 
+- 1. Project -> Build -> Publish.
+- 2. Choose destiny folder (this project).
