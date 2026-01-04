@@ -3,7 +3,7 @@
 Drively is an open-source code that uses mobile phone as a steering wheel and pedals for gaming and simulation. 
 
 # Requirements 
-1. Install [ViGEm Bus](https://vigembus.com/)
+1. Install [ViGEm Bus](https://vigembus.com/) or [ViGEm Bus](https://github.com/nefarius/ViGEmBus/releases)
 2. Restart PC
 
 # Installation & Usage
